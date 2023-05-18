@@ -29,7 +29,7 @@ class ActiveSupport::TestCase
   end
 end
 
-class ActionDispatch::IntegrationTest
+class ActionDispatch::IntegrationTest #log_in_asメソッドが上にあるが以下のは別クラスとして書いてあるので問題なし
 
   # テストユーザーとしてログインする
   def log_in_as(user, password: 'password', remember_me: '1')
