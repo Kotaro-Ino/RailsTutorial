@@ -6,4 +6,4 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /app
-ENV LANG C.UTF-8
+ENV LANG C.UTF-8#
