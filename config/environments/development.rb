@@ -7,9 +7,10 @@ Rails.application.configure do
   config.cache_classes = false
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "smtp", :port => 1025 }
   host = 'localhost:3000'  # ここをコピペすると失敗します。自分の環境に合わせてください。
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
   # Do not eager load code on boot.
   config.eager_load = false
